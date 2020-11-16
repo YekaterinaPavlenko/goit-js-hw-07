@@ -18,19 +18,11 @@ const images = [
 
 const galleryRef = document.getElementById('gallery');
 console.log(galleryRef);
-// galleryRef.insertAdjacentHTML('afterbegin', `<li><img url = ${images.url} alt = ${image.alt}></li>`);
-let galleryItemRef;
+
 images.map(image => {
-    galleryRef.insertAdjacentHTML('afterbegin', `<li><img src = '${image.url}' alt = ]'${image.alt}'></li>`);
-    // let galleryItemRef = document.createElement('li');
-    // let galleryImg = document.createElement('img');
-    // galleryImg.setAttribute('url', image.url);
-    // galleryImg.setAttribute('alt', image.alt);
-    // galleryItemRef.appendChild(galleryImg);
-    // galleryRef.insertAdjacentHTML(position, string)
-    // console.log(galleryRef);
-    // return galleryRef;
+    galleryRef.insertAdjacentHTML('afterbegin', `<li class = 'gallery-item'><img  class = 'gallery-img' src = '${image.url}' alt = '${image.alt}' width = '300'></li>`);
 });
+galleryRef.classList.add('gallery-box');
 
 // Задание 3
 // Напиши скрипт для создания галлереи изображений по массиву данных.

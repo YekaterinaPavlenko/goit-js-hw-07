@@ -1,14 +1,31 @@
-ul {
-  display: flex;
-  width: 980px;
-  padding: 0;
-  list-style: none;
+* {
+  box-sizing: border-box;
 }
-li {
-  width: calc(100% - 4 * 20px) / 3;
 
-  margin-left: 20px;
-}
-img {
+.gallery-box {
+  display: flex;
   width: 100%;
+  margin: auto;
+  padding: 0;
+  /* padding-left: 10px;
+  padding-right: 10px; */
+  list-style: none;
+
+  overflow: hidden;
 }
+.gallery-item {
+  width: calc(100% - 4 * 30px) / 3;
+  margin: auto 0 auto 30px;
+  /* margin-left: 30px; */
+}
+.gallery-img {
+  display: block;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+/* img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+} */
