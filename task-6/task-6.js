@@ -1,12 +1,30 @@
 const inputRef = document.querySelector('#validation-input');
-
-inputRef.addEventListener('blur', event =>
-{ const inputDataLength = event.target.value.length;
+inputRef.addEventListener('blur', event => {
+  const inputDataLength = event.target.value.length;
   const userInputLength = Number(inputRef.dataset.length);
-  const borderColorAdd = inputDataLength === userInputLength ? inputRef.classList.add('valid') || inputRef.classList.remove('invalid') : inputRef.classList.add('invalid');
+  let borderColorAdd;
+  if (inputDataLength === 0) {
+    inputRef.classList.remove('invalid');
+    inputRef.classList.remove('valid')
+  } else if (inputDataLength === userInputLength) {
+    inputRef.classList.add('valid');
+    inputRef.classList.remove('invalid');
+  } else {
+    inputRef.classList.add('invalid');
+    inputRef.classList.remove('valid');}
+})
+  
+
+// 2вариант.Рабочий, но плохо читаемый.
+// const inputRef = document.querySelector('#validation-input');
+
+// inputRef.addEventListener('blur', event =>
+// { const inputDataLength = event.target.value.length;
+//   const userInputLength = Number(inputRef.dataset.length);
+//   const borderColorAdd = inputDataLength === userInputLength ? inputRef.classList.add('valid') || inputRef.classList.remove('invalid') : inputRef.classList.add('invalid');
     
-  inputDataLength === 0 ? inputRef.classList.remove('invalid') || inputRef.classList.remove('valid') : borderColorAdd;   
-});
+//   inputDataLength === 0 ? inputRef.classList.remove('invalid') || inputRef.classList.remove('valid') : borderColorAdd;   
+// });
  
 // Задание 6
 // Напиши скрипт, который бы при потере фокуса на инпуте, проверял его содержимое на правильное количество символов.
@@ -30,5 +48,4 @@ inputRef.addEventListener('blur', event =>
 // }
 
 // #validation-input.invalid {
-//   border-color: #f44336;
-// }
+//   border-color: #f44336;}
