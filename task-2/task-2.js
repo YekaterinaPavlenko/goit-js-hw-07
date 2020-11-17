@@ -7,22 +7,22 @@ const ingredients = [
   'Зелень',
   'Приправы',
 ];
-// Первый вариант.
+// Первый вариант.Рабочий.
 // let itemRef;
 // ingredients.forEach((ingredient, i, ingredients) => {
 //     itemRef = document.createElement('li');
 //     itemRef.textContent = ingredients[i];
 //     parentRef.appendChild(itemRef)
-//     console.log(itemRef);
+//     // console.log(itemRef);
 // });
 
 
-// Второй вариант.
+// Второй вариант.Тоже рабочий.
 let ingredientItemRef;
 const createIngredientItem = ingredient => {
   ingredientItemRef = document.createElement('li');
   ingredientItemRef.textContent = ingredient;
-  console.log(ingredientItemRef);
+  // console.log(ingredientItemRef);
   return ingredientItemRef;
 };
 const allIngredients = ingredients.map(ingredient => createIngredientItem(ingredient));

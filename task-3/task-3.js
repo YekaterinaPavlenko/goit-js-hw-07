@@ -16,7 +16,7 @@ const images = [
   },
 ];
 const galleryRef = document.getElementById('gallery');
-// console.log(galleryRef);
+console.log(galleryRef);
 const galleryItemsSet = images.map(image => 
   `<li class = 'gallery-item'><img class = 'gallery-img' src = '${image.url}' alt = '${image.alt}' width = '300'></li>`);
  galleryRef.insertAdjacentHTML('afterbegin', galleryItemsSet);
