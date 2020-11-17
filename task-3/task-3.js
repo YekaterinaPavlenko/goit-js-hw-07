@@ -15,14 +15,21 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
-
 const galleryRef = document.getElementById('gallery');
-console.log(galleryRef);
+// console.log(galleryRef);
+const galleryItemsSet = images.map(image => 
+  `<li class = 'gallery-item'><img class = 'gallery-img' src = '${image.url}' alt = '${image.alt}' width = '300'></li>`);
+ galleryRef.insertAdjacentHTML('afterbegin', galleryItemsSet);
+ galleryRef.classList.add('gallery-box'); 
 
-images.map(image => {
-    galleryRef.insertAdjacentHTML('afterbegin', `<li class = 'gallery-item'><img  class = 'gallery-img' src = '${image.url}' alt = '${image.alt}' width = '300'></li>`);
-});
-galleryRef.classList.add('gallery-box');
+//2метод. рабочий, но добавляет при каждой итерации мэп.
+// const galleryRef = document.getElementById('gallery');
+// // console.log(galleryRef);
+
+// images.map(image => {
+//     galleryRef.insertAdjacentHTML('afterbegin', `<li class = 'gallery-item'><img  class = 'gallery-img' src = '${image.url}' alt = '${image.alt}' width = '300'></li>`);
+// });
+// galleryRef.classList.add('gallery-box');
 
 // Задание 3
 // Напиши скрипт для создания галлереи изображений по массиву данных.
