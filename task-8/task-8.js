@@ -1,3 +1,28 @@
+const renderBtnRef = document.querySelector('button[data-action ="render"]');
+const userInputRef = document.querySelector('div#controls > input');
+const boxRef = document.querySelector('#boxes');
+console.log(renderBtnRef);
+console.dir(userInputRef);
+console.log(userInputRef);
+console.log(boxRef);
+
+//  renderBtnRef.addEventListener('clic', createBoxes);
+let amount = userInputRef.addEventListener('input', event => {
+    amount = event.target.value;
+    console.log(amount);
+    return amount;
+});
+ console.dir(amount);
+renderBtnRef.addEventListener('clic', event => {
+    let createDiv = document.createElement('div');
+//     const allIngredients = ingredients.map(ingredient => createIngredientItem(ingredient));
+// parentRef.append(...allIngredients);
+    console.dir(createDiv);
+    boxRef.appendChild(createDiv);
+});
+
+ 
+
 // Задание 8 - дополнительное, выполнять не обязательно
 // Напиши скрипт создания и очистки коллекции элементов. Пользователь вводит количество элементов в input и нажимает кнопку Создать, после чего рендерится коллекция. При нажатии на кнопку Очистить, коллекция элементов очищается.
 
