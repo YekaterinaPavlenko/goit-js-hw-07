@@ -1,8 +1,8 @@
-let fontSizeControl = document.getElementById('font-size-control');
+let fontSizeControlRef = document.getElementById('font-size-control');
+let textRef = document.getElementById('text');
 
-
-fontSizeControl.addEventListener('input', event => {
-    document.getElementById('text').style.fontSize = `${fontSizeControl.value}px`;
+fontSizeControlRef.addEventListener('input', event => {
+    textRef.style.fontSize = `${fontSizeControlRef.value}px`;
 });
 
 // Задание 7
