@@ -19,7 +19,7 @@ const galleryRef = document.getElementById('gallery');
 console.log(galleryRef);
 const galleryItemsSet = images.map(image => 
   `<li class = 'gallery-item'><img class = 'gallery-img' src = '${image.url}' alt = '${image.alt}' width = '300'></li>`);
- galleryRef.insertAdjacentHTML('afterbegin', galleryItemsSet);
+ galleryRef.insertAdjacentHTML('afterbegin', galleryItemsSet.join(" "));
  galleryRef.classList.add('gallery-box'); 
 
 //2метод. рабочий, но добавляет при каждой итерации мэп.
